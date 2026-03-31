@@ -10,26 +10,31 @@
         body { background: var(--dark); color: white; font-family: 'Segoe UI', sans-serif; text-align: center; margin: 0; padding-bottom: 60px; }
         
         header { padding: 40px; border-bottom: 2px solid var(--gold); background: #000; }
-        .logo { max-width: 350px; border-radius: 8px; margin-bottom: 10px; }
-        .location-info { color: var(--gold); font-size: 1.3rem; font-weight: bold; margin: 15px 0; display: block; }
+        
+        /* Ajuste do Logo */
+        .logo-container { margin-bottom: 20px; }
+        .logo { max-width: 400px; width: 90%; height: auto; border-radius: 8px; }
+        
+        .location-info { color: var(--gold); font-size: 1.4rem; font-weight: bold; margin: 15px 0; display: block; text-transform: uppercase; letter-spacing: 2px; }
         .location-info i { margin-right: 10px; }
 
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; padding: 40px; max-width: 1300px; margin: auto; }
         .card { background: var(--card-bg); border: 1px solid #333; border-radius: 15px; overflow: hidden; text-align: left; transition: 0.3s; }
         .card:hover { border-color: var(--gold); transform: translateY(-5px); }
-        .card img { width: 100%; height: 230px; object-fit: cover; border-bottom: 2px solid var(--gold); }
+        .card img { width: 100%; height: 250px; object-fit: cover; border-bottom: 2px solid var(--gold); }
         
         .card-content { padding: 25px; }
-        .card h3 { color: var(--gold); margin: 0 0 15px 0; text-transform: uppercase; font-size: 1.4rem; }
+        .card h3 { color: var(--gold); margin: 0 0 15px 0; text-transform: uppercase; font-size: 1.4rem; border-bottom: 1px solid #333; padding-bottom: 10px; }
         .skills-list { padding: 0; list-style: none; font-size: 0.95rem; color: #e0e0e0; line-height: 1.6; }
-        .skills-list li { margin-bottom: 10px; }
-        .skills-list li::before { content: "✔ "; color: var(--gold); font-weight: bold; margin-right: 8px; }
+        .skills-list li { margin-bottom: 10px; display: flex; align-items: flex-start; }
+        .skills-list li::before { content: "✔"; color: var(--gold); margin-right: 12px; font-weight: bold; }
 
-        .budget-btn { display: inline-block; background: var(--gold); color: black; padding: 18px 35px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.1rem; transition: 0.3s; box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3); }
+        .budget-btn { display: inline-block; background: var(--gold); color: black; padding: 20px 40px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.2rem; transition: 0.3s; box-shadow: 0 4px 20px rgba(212, 175, 55, 0.4); margin-top: 10px; }
         .budget-btn:hover { background: #fff; transform: scale(1.05); }
 
         .social-float { position: fixed; right: 20px; bottom: 30px; display: flex; flex-direction: column; gap: 15px; z-index: 1000; }
-        .s-btn { width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-size: 28px; box-shadow: 0 4px 15px rgba(0,0,0,0.7); }
+        .s-btn { width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-size: 28px; box-shadow: 0 4px 15px rgba(0,0,0,0.8); transition: 0.3s; }
+        .s-btn:hover { transform: scale(1.1); }
         .insta { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
         .tik { background: #000; border: 1px solid #fff; }
         .wapp { background: #25D366; }
@@ -38,7 +43,9 @@
 <body>
 
 <header>
-    <img src="mendez-web/logotipoempresa.jpg.jpg" class="logo" alt="Mendez Construções">
+    <div class="logo-container">
+        <img src="mendez-web/logotipoempresa.jpg.jpg" class="logo" alt="Mendez Construções" onerror="this.src='logotipoempresa.jpg.jpg'">
+    </div>
     
     <span class="location-info">
         <i class="fas fa-map-marker-alt"></i> LONDRINA - PARANÁ
