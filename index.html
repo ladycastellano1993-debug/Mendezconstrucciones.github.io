@@ -4,51 +4,127 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mendez Construcciones | Londrina</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --gold: #D4AF37; --dark: #121212; }
-        body { background: var(--dark); color: white; font-family: 'Times New Roman', serif; text-align: center; margin: 0; }
-        header { padding: 50px; border-bottom: 2px solid var(--gold); }
-        .logo { max-width: 250px; margin-bottom: 20px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; padding: 40px; }
-        .card { background: #1c1c1c; border: 1px solid #333; border-radius: 10px; overflow: hidden; }
-        .card:hover { border-color: var(--gold); }
-        .card img { width: 100%; height: 200px; object-fit: cover; }
-        .card h3 { color: var(--gold); padding: 10px; }
-        .btn-ws { display: inline-block; background: #25D366; color: white; padding: 15px 30px; text-decoration: none; border-radius: 50px; font-weight: bold; margin: 40px; }
+        :root { --gold: #D4AF37; --dark: #121212; --card-bg: #1c1c1c; }
+        body { background: var(--dark); color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: center; margin: 0; padding-bottom: 50px; }
+        
+        /* Header y Logo */
+        header { padding: 40px 20px; border-bottom: 2px solid var(--gold); background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('mendez-web/estruturas-metalicas.jpg.jpg'); background-size: cover; background-position: center; }
+        .logo { max-width: 300px; filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.5)); }
+        
+        /* Grid de Servicios */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; padding: 40px 20px; max-width: 1300px; margin: auto; }
+        .card { background: var(--card-bg); border: 1px solid #333; border-radius: 15px; overflow: hidden; transition: 0.3s; text-align: left; }
+        .card:hover { border-color: var(--gold); transform: translateY(-10px); }
+        .card img { width: 100%; height: 220px; object-fit: cover; border-bottom: 2px solid var(--gold); }
+        .card-content { padding: 20px; }
+        .card h3 { color: var(--gold); margin: 0 0 10px 0; text-transform: uppercase; font-size: 1.4rem; }
+        
+        /* Habilidades */
+        .skills-list { padding: 0; margin: 15px 0; list-style: none; font-size: 0.9rem; color: #ccc; }
+        .skills-list li { margin-bottom: 8px; display: flex; align-items: center; }
+        .skills-list li::before { content: "✔"; color: var(--gold); margin-right: 10px; font-weight: bold; }
+
+        /* Botones Flotantes */
+        .floating-social { position: fixed; right: 20px; bottom: 100px; display: flex; flex-direction: column; gap: 15px; z-index: 1000; }
+        .social-btn { width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-size: 24px; box-shadow: 0 4px 10px rgba(0,0,0,0.5); transition: 0.3s; }
+        .social-btn:hover { transform: scale(1.1); }
+        .instagram { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
+        .tiktok { background: #000000; border: 1px solid #ff0050; }
+        .whatsapp-float { background: #25D366; }
+
+        .btn-main-ws { display: inline-block; background: #25D366; color: white; padding: 18px 40px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 1.2rem; margin-top: 30px; transition: 0.3s; }
+        .btn-main-ws:hover { background: #128C7E; box-shadow: 0 0 20px rgba(37, 211, 102, 0.4); }
     </style>
 </head>
 <body>
 
 <header>
-    <img src="mendez-web/logotipoempresa.jpg.jpg" class="logo" alt="Logo Mendez">
-    <h1>MENDEZ CONSTRUCCIONES</h1>
-    <p>Excelência em Cada Obra - Londrina, PR</p>
+    <img src="mendez-web/logotipoempresa.jpg.jpg" class="logo" alt="Logo Mendez Construcciones">
+    <p style="color: var(--gold); font-size: 1.2rem; letter-spacing: 2px;">EXCELÊNCIA EM CADA OBRA</p>
 </header>
 
 <div class="grid">
     <div class="card">
-        <img src="mendez-web/engenhariaeacabamento.jpg.jpg">
-        <h3>Serviço de Obra</h3>
-        <p>Alvenaria e Acabamentos Premium</p>
+        <img src="mendez-web/engenhariaeacabamento.jpg.jpg" alt="Servicio de Obra">
+        <div class="card-content">
+            <h3>Serviço de Obra</h3>
+            <ul class="skills-list">
+                <li>Leitura de projetos e fundações</li>
+                <li>Alvenaria estrutural e acabamentos</li>
+                <li>Revestimentos cerâmicos e porcelanato</li>
+                <li>Impermeabilização de lajes e paredes</li>
+            </ul>
+        </div>
     </div>
+
     <div class="card">
-        <img src="mendez-web/sistemasdedrywall.jpg.jpg">
-        <h3>Drywall</h3>
-        <p>Sistemas Modernos e Divisórias</p>
+        <img src="mendez-web/instalacoes-eletricas.png.png" alt="Electricidad">
+        <div class="card-content">
+            <h3>Especialista Elétrico</h3>
+            <ul class="skills-list">
+                <li>Instalação de redes residenciais e comerciais</li>
+                <li>Montagem de quadros de distribuição</li>
+                <li>Manutenção preventiva y preditiva</li>
+                <li>Instalação de sistemas de iluminação LED</li>
+            </ul>
+        </div>
     </div>
+
     <div class="card">
-        <img src="mendez-web/instalacoes-eletricas.png.png">
-        <h3>Elétrica</h3>
-        <p>Instalações Seguras e Completas</p>
+        <img src="mendez-web/estruturas-metalicas.jpg.jpg" alt="Soldadura">
+        <div class="card-content">
+            <h3>Soldagem e Estruturas</h3>
+            <ul class="skills-list">
+                <li>Solda MIG/MAG e Eletrodo Revestido</li>
+                <li>Fabricação de portões e grades</li>
+                <li>Montagem de estruturas metálicas pesadas</li>
+                <li>Corte e dobra de chapas de aço</li>
+            </ul>
+        </div>
     </div>
+
     <div class="card">
-        <img src="mendez-web/carpintariapremium.jpg.jpg">
-        <h3>Carpintaria</h3>
-        <p>Estruturas e Acabamentos em Madeira</p>
+        <img src="mendez-web/sistemasdedrywall.jpg.jpg" alt="Drywall">
+        <div class="card-content">
+            <h3>Sistemas Drywall</h3>
+            <ul class="skills-list">
+                <li>Forros acusticos e decorativos</li>
+                <li>Divisórias leves e rápidas</li>
+                <li>Acabamento fino com massa e lixamento</li>
+                <li>Sancas e nichos iluminados</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="mendez-web/carpintariapremium.jpg.jpg" alt="Carpinteria">
+        <div class="card-content">
+            <h3>Carpintaria Premium</h3>
+            <ul class="skills-list">
+                <li>Estruturas de telhados em madeira</li>
+                <li>Escadas e decks personalizados</li>
+                <li>Instalação de portas e guarnições</li>
+                <li>Tratamento e proteção de madeiras</li>
+            </ul>
+        </div>
     </div>
 </div>
 
-<a href="https://wa.me/5543999999999" class="btn-ws">Solicitar Orçamento via WhatsApp</a>
+<a href="https://wa.me/5543999999999" class="btn-main-ws">SOLICITAR ORÇAMENTO AGORA</a>
+
+<div class="floating-social">
+    <a href="https://instagram.com/TU_USUARIO" target="_blank" class="social-btn instagram">
+        <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://tiktok.com/@TU_USUARIO" target="_blank" class="social-btn tiktok">
+        <i class="fab fa-tiktok"></i>
+    </a>
+    <a href="https://wa.me/5543999999999" target="_blank" class="social-btn whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</div>
 
 </body>
 </html>
