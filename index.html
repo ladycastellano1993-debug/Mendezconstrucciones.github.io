@@ -7,16 +7,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root { --gold: #D4AF37; --dark: #121212; --card-bg: #1c1c1c; }
-        body { background: var(--dark); color: white; font-family: 'Segoe UI', sans-serif; text-align: center; margin: 0; padding-bottom: 60px; }
+        body { background: var(--dark); color: white; font-family: 'Segoe UI', sans-serif; text-align: center; margin: 0; padding-bottom: 80px; }
         
-        header { padding: 40px; border-bottom: 2px solid var(--gold); background: #000; }
+        header { padding: 40px 20px; border-bottom: 2px solid var(--gold); background: #000; }
         
-        /* Ajuste do Logo */
-        .logo-container { margin-bottom: 20px; }
-        .logo { max-width: 400px; width: 90%; height: auto; border-radius: 8px; }
+        .logo-container { margin-bottom: 15px; }
+        .logo { max-width: 350px; width: 90%; height: auto; border-radius: 8px; }
         
         .location-info { color: var(--gold); font-size: 1.4rem; font-weight: bold; margin: 15px 0; display: block; text-transform: uppercase; letter-spacing: 2px; }
-        .location-info i { margin-right: 10px; }
+        .location-info i { margin-right: 10px; color: #ff4d4d; }
 
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; padding: 40px; max-width: 1300px; margin: auto; }
         .card { background: var(--card-bg); border: 1px solid #333; border-radius: 15px; overflow: hidden; text-align: left; transition: 0.3s; }
@@ -29,112 +28,17 @@
         .skills-list li { margin-bottom: 10px; display: flex; align-items: flex-start; }
         .skills-list li::before { content: "✔"; color: var(--gold); margin-right: 12px; font-weight: bold; }
 
-        .budget-btn { display: inline-block; background: var(--gold); color: black; padding: 20px 40px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.2rem; transition: 0.3s; box-shadow: 0 4px 20px rgba(212, 175, 55, 0.4); margin-top: 10px; }
+        .budget-btn { display: inline-block; background: var(--gold); color: black; padding: 20px 40px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.2rem; transition: 0.3s; box-shadow: 0 4px 20px rgba(212, 175, 55, 0.4); margin-top: 15px; }
         .budget-btn:hover { background: #fff; transform: scale(1.05); }
 
+        /* Botão Flutuante de WhatsApp Atualizado */
         .social-float { position: fixed; right: 20px; bottom: 30px; display: flex; flex-direction: column; gap: 15px; z-index: 1000; }
-        .s-btn { width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-size: 28px; box-shadow: 0 4px 15px rgba(0,0,0,0.8); transition: 0.3s; }
-        .s-btn:hover { transform: scale(1.1); }
+        .s-btn { width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-size: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.8); transition: 0.3s; }
         .insta { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
         .tik { background: #000; border: 1px solid #fff; }
-        .wapp { background: #25D366; }
-    </style>
-</head>
-<body>
-
-<header>
-    <div class="logo-container">
-        <img src="mendez-web/logotipoempresa.jpg.jpg" class="logo" alt="Mendez Construções" onerror="this.src='logotipoempresa.jpg.jpg'">
-    </div>
-    
-    <span class="location-info">
-        <i class="fas fa-map-marker-alt"></i> LONDRINA - PARANÁ
-    </span>
-
-    <a href="https://wa.me/5543988086473?text=Olá! Gostaria de solicitar um orçamento grátis para um serviço de construção ou reforma em Londrina." class="budget-btn">
-        SOLICITE ORÇAMENTO GRÁTIS
-    </a>
-</header>
-
-<div class="grid">
-    <div class="card">
-        <img src="mendez-web/instalacoes-eletricas.png.png" alt="Eletricista">
-        <div class="card-content">
-            <h3>Eletricista</h3>
-            <ul class="skills-list">
-                <li>Instalação e Manutenção Elétrica completa</li>
-                <li>Montagem de Quadros de Distribuição modernos</li>
-                <li>Padrões de Entrada seguindo normas técnicas</li>
-                <li>Projetos de Iluminação embutida e LED</li>
-                <li>Cumprimento rigoroso das Normas de Segurança NR-10</li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="card">
-        <img src="mendez-web/carpintariapremium.jpg.jpg" alt="Carpintaria">
-        <div class="card-content">
-            <h3>Carpintaria</h3>
-            <ul class="skills-list">
-                <li>Construção de Estruturas de Telhado resistentes</li>
-                <li>Fabricação de Esquadrias de Madeira sob medida</li>
-                <li>Mobiliário Sob Medida para todos os ambientes</li>
-                <li>Instalação de Decks e Varandas de alto padrão</li>
-                <li>Acabamento Fino em portas e guarnições</li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="card">
-        <img src="mendez-web/estruturas-metalicas.jpg.jpg" alt="Soldadura">
-        <div class="card-content">
-            <h3>Soldadura</h3>
-            <ul class="skills-list">
-                <li>Soldagem profissional TIG, MIG/MAG e Eletrodo</li>
-                <li>Estruturas Metálicas de Grande Porte para galpões</li>
-                <li>Criação de Portões e Grades Artísticas exclusivas</li>
-                <li>Manutenção de Tanques e Reservatórios industriais</li>
-                <li>Inspeção de Solda para garantir máxima segurança</li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="card">
-        <img src="mendez-web/sistemasdedrywall.jpg.jpg" alt="Drywall">
-        <div class="card-content">
-            <h3>Drywall</h3>
-            <ul class="skills-list">
-                <li>Montagem de Divisórias e Paredes inteligentes</li>
-                <li>Forros Acústicos e Decorativos personalizados</li>
-                <li>Criação de Sancas e Nichos com design moderno</li>
-                <li>Isolamento Térmico e Acústico de alta performance</li>
-                <li>Instalação Rápida e Limpa para sua obra</li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="card">
-        <img src="mendez-web/engenhariaeacabamento.jpg.jpg" alt="Serviço de Obra">
-        <div class="card-content">
-            <h3>Engenharia e Acabamento</h3>
-            <ul class="skills-list">
-                <li>Alvenaria estrutural e reformas em geral</li>
-                <li>Assentamento de Porcelanato e Pisos cerâmicos</li>
-                <li>Impermeabilização completa contra infiltrações</li>
-                <li>Revestimentos de parede com acabamento Premium</li>
-                <li>Leitura técnica de projetos e execução de obra</li>
-            </ul>
-        </div>
-    </div>
-</div>
-
-<div class="social-float">
-    <a href="https://instagram.com" target="_blank" class="s-btn insta"><i class="fab fa-instagram"></i></a>
-    <a href="https://tiktok.com" target="_blank" class="s-btn tik"><i class="fab fa-tiktok"></i></a>
-    <a href="https://wa.me/5543988086473?text=Olá! Gostaria de um orçamento para a Mendez Construções em Londrina." target="_blank" class="s-btn wapp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-</div>
-
-</body>
-</html>
+        .wapp { background: #25D366; animation: pulse 2s infinite; }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(3
